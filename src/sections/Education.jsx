@@ -25,11 +25,11 @@ export const Education = () => {
     <section id="education" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         {/* section header  */}
-        <div className="max-w-3xl mb-16">
+        <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
             Academic Journey
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className=" my-4 text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
             Education that shaped my&nbsp;
             <span className="font-serif italic font-normal text-white">
               technical foundation

@@ -46,7 +46,7 @@ export const Projects = () => {
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             Featured work
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className="my-4 text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
             Building solutions through <br />
             <span className="font-serif italic font-normal text-white">
               code and creativity
