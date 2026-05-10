@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/Button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
@@ -18,6 +19,16 @@ const skills = [
 ];
 
 export const Hero = () => {
+
+  const [particles] = useState(() =>
+  Array.from({ length: 30 }, () => ({
+    left: `${Math.random() * 100}%`,
+    top: `${Math.random() * 100}%`,
+    duration: `${15 + Math.random() * 20}s`,
+    delay: `${Math.random() * 5}s`,
+  }))
+);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Bg  */}
@@ -32,18 +43,19 @@ export const Hero = () => {
 
       {/* Green dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
-          <div
-            className="absolute w-1.5 h-1.5 rounded-full opacity-60"
-            style={{
-              backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
+        {particles.map((particle, i) => (
+    <div
+      key={i}
+      className="absolute w-1.5 h-1.5 rounded-full opacity-60"
+      style={{
+        backgroundColor: "#20B2A6",
+        left: particle.left,
+        top: particle.top,
+        animation: `slow-drift ${particle.duration} ease-in-out infinite`,
+        animationDelay: particle.delay,
+      }}
+    />
+  ))}
       </div>
 
       {/* Content  */}
