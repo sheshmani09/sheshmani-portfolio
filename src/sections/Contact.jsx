@@ -126,6 +126,7 @@ export const Contact = () => {
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                   placeholder="Your good name..."
                   required
+                  autoComplete="off"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -146,6 +147,7 @@ export const Contact = () => {
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                   placeholder="your@email.com"
                   required
+                  autoComplete="off"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
@@ -161,6 +163,7 @@ export const Contact = () => {
                   rows={5}
                   className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
                   required
+                  autoComplete="off"
                   placeholder="your message..."
                   value={formData.message}
                   onChange={(e) =>
@@ -205,6 +208,45 @@ export const Contact = () => {
                 </div>
               )}
             </form>
+          </div>
+
+          {/* contact info  */}
+          <div className="space-y-6 animate-fade-in animation-delay-400">
+            <div className="glass rounded-3xl p-8">
+              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                {contactInfo.map((item, i) => (
+                  <a
+                    key={i}
+                    href={item.href}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <div className="text-sm text-muted-foreground">
+                        {item.label}
+                      </div>
+                      <div className="font-medium">{item.value}</div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+                {/* Availablity card  */}
+               <div className="glass rounded-3xl p-8 border border-primary/30">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <span className="font-medium">Currently Available</span>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                I'm currently open to new opportunities and exciting projects.
+                let's talk!
+              </p>
+            </div>  
+
           </div>
         </div>
       </div>
