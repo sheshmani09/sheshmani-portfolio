@@ -13,19 +13,19 @@ import emailjs from "@emailjs/browser";
 const contactInfo = [
   {
     icon: Mail,
-    lable: "Email",
+    label: "Email",
     value: "sheshmanisahu09@gmail.com",
     href: "mailto:sheshmanisahu09@gmail.com",
   },
   {
     icon: Phone,
-    lable: "Phone",
+    label: "Phone",
     value: "+91 9575984693",
     href: "tel:+919575984693",
   },
   {
     icon: MapPin,
-    lable: "Location",
+    label: "Location",
     value: "Pune, Maharashtra",
     href: "#",
   },
@@ -73,7 +73,7 @@ export const Contact = () => {
 
       setSubmitStatus({
         type: "success",
-        message: "Message sent successfully! Will get back to you soon!",
+        message: "Message sent successfully! I’ll get back to you soon.",
       });
 
       setFormData({ name: "", email: "", message: "" });
@@ -243,7 +243,7 @@ export const Contact = () => {
               </div>
               <p className="text-muted-foreground text-sm">
                 I'm currently open to new opportunities and exciting projects.
-                let's talk!
+                Let’s connect.
               </p>
             </div>  
 

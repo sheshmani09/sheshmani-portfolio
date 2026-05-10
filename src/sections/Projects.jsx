@@ -1,20 +1,22 @@
 import { ArrowUpRight, ExternalLink, Link } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import budgetImg from "@/assets/projects/budget.png";
+import aerocastImg from "@/assets/projects/aerocast.png";
 
 const projects = [
   {
     title: "Expense Tracker",
     description:
-      "A minimal expense tracker to keep track of your personal finance",
-    image: "src/assets/projects/budget.png",
+      "A responsive expense tracker for managing personal finances with real-time updates.",
+    image: budgetImg,
     tags: ["HTML", "Tailwind CSS", "JavaScript"],
     link: "https://sheshmani09.github.io/Budget-Buddy/",
     github: "https://github.com/sheshmani09/Budget-Buddy",
   },
   {
     title: "AeroCast - Weather Forecast",
-    description: "A modern weather forecast web app",
-    image: "src/assets/projects/aerocast.png",
+    description: "A responsive weather application delivering real-time forecasts using API integration.",
+    image: aerocastImg,
     tags: ["HTML", "Tailwind CSS", "JavaScript", "API Integration"],
     link: "https://sheshmani09.github.io/AeroCast/",
     github: "https://github.com/sheshmani09/AeroCast",
@@ -44,7 +46,7 @@ export const Projects = () => {
         {/* section header  */}
         <div className="text-center mx-auto max-w-3xl mb-16">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Featured work
+            Featured Work
           </span>
           <h2 className="my-4 text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
             Building solutions through <br />
@@ -76,6 +78,8 @@ export const Projects = () => {
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
                     href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-foreground transition-all"
                   >
                     <ExternalLink className="w-5 h-5" />
@@ -117,10 +121,16 @@ export const Projects = () => {
 
         {/* view all cta button  */}
         <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All projects
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
+          <a
+            href="https://github.com/sheshmani09"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <AnimatedBorderButton>
+              View All Projects
+              <ArrowUpRight className="w-5 h-5" />
+            </AnimatedBorderButton>
+          </a>
         </div>
       </div>
     </section>

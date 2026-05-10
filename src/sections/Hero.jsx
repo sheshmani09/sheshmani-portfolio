@@ -1,4 +1,6 @@
 import { useState } from "react";
+import heroBg from "@/assets/hero-bg.jpg";
+import profileImg from "@/assets/image.png";
 import { Button } from "@/components/Button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
@@ -34,7 +36,7 @@ export const Hero = () => {
       {/* Bg  */}
       <div className="absolute inset-0">
         <img
-          src="/src/assets/hero-bg.jpg"
+          src={heroBg}
           alt="main-background"
           className="w-full h-full object-cover opacity-40"
         />
@@ -78,7 +80,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-100">
-                Hi, I'm Sheshmani Sahu — a budding software engineer currently
+                Hi, I'm Sheshmani Sahu — a budding software engineer
                 ongoing specialized training(PGCP-AC) at CDAC ACTS Pune. I
                 currently have hands-on pratice in Javascript , React.js, Java,
                 MySQL database. Focused on building scalable and user centric
@@ -112,7 +114,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="src/assets/image.png"
+                  src={profileImg}
                   alt="Sheshmani"
                   className="w-full aspect-4/5  object-cover rounded-2xl"
                 />

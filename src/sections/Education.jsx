@@ -1,7 +1,7 @@
 const educations = [
   {
     period: "Feb 2026 - Aug 2026",
-    course: "PGCP-Advance Computing",
+    course: "PGCP-AC",
     institute: "CDAC ACTS, Pune",
     current: true,
   },
@@ -9,12 +9,12 @@ const educations = [
     period: "Oct 2021 - July 2025",
     course: "B.Tech CSE",
     institute:
-      "Shri Shankaracharya Institute of Proffessional Management and Technology, Raipur",
+      "Shri Shankaracharya Institute of Professional Management and Technology, Raipur",
     current: false,
   },
   {
     period: "June 2019 - Apr 2020",
-    course: "12th PCM",
+    course: "Class XII (PCM)",
     institute: "Vardhaman The School, Raipur",
     current: false,
   },
@@ -54,7 +54,7 @@ export const Education = () => {
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 {/* timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-17 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
+                <div className="absolute left-0 md:left-1/2 top-16 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
                 {edu.current && <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75"></span>}
                 </div>
                 {/* content  */}

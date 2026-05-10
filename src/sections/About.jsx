@@ -60,7 +60,7 @@ export const About = () => {
                 and database understanding through Java and MySQL.
               </p>
               <p>
-                With the aspiration of becoming a software developer, I’m
+               As an aspiring software developer, I’m
                 focused on continuously strengthening my technical skills,
                 writing clean and maintainable code, and building software that
                 is reliable, scalable, and thoughtfully engineered.
@@ -76,7 +76,7 @@ export const About = () => {
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
-                  <item.icon className="w-6 h6 text-primary" />
+                  <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 ">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">
