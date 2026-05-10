@@ -76,9 +76,16 @@ export const Hero = () => {
             {/* CTAs  */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />{" "}
+                <a href="#contact">Contact Me</a>{" "}
+                <ArrowRight className="w-5 h-5" />{" "}
               </Button>
-              <AnimatedBorderButton>Donwload Resume</AnimatedBorderButton>
+              <a
+                href="https://drive.google.com/file/d/1xB7FTOvUbA256R8ShMcnjhhf-SdTnuno/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AnimatedBorderButton>Download Resume</AnimatedBorderButton>
+              </a>
             </div>
           </div>
           {/* Right profile image */}
@@ -93,7 +100,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="src/assets/photo_sheshmani.png"
+                  src="src/assets/image.png"
                   alt="Sheshmani"
                   className="w-full aspect-4/5  object-cover rounded-2xl"
                 />
@@ -119,14 +126,18 @@ export const Hero = () => {
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skills, idx) => (
                 <div key={idx} className="shrink-0 px-8 py-4">
-                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skills}</span>{" "}
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skills}
+                  </span>{" "}
                 </div>
               ))}
             </div>
           </div>
         </div>
         <div className="text-muted-foreground w-5 mx-auto mt-5">
-          <a href="#about" className="flex-col justify-center"><div>Scroll</div> <ChevronDown  className="animate-bounce ml-2"/></a>
+          <a href="#about" className="flex-col justify-center">
+            <div>Scroll</div> <ChevronDown className="animate-bounce ml-2" />
+          </a>
         </div>
       </div>
     </section>

@@ -6,8 +6,7 @@ import { X } from "lucide-react";
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#testimonial", label: "Testimonial" },
+  { href: "#education", label: "Education" }
 ];
 
 export const Navbar = () => {
@@ -52,7 +51,7 @@ export const Navbar = () => {
         </div>
         {/* CTA button  */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Button size="sm"><a href="#contact">Contact Me</a> </Button>
         </div>
 
         {/* mobile menu button*/}
@@ -80,7 +79,7 @@ export const Navbar = () => {
             ))}
 
             <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
+              <a href="#contact">Contact Me</a>
             </Button>
           </div>
         </div>

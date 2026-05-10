@@ -22,7 +22,7 @@ const educations = [
 
 export const Education = () => {
   return (
-    <section id="education" className="py-32 relative overflow-hidden">
+    <section id="education" className="py-10 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         {/* section header  */}
         <div className="text-center mx-auto max-w-3xl mb-16">
